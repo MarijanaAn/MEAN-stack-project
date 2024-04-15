@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item active" routerLink="/adminpocetna" *ngIf="admin">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item" routerLink="/dodaj" *ngIf="admin">Dodaj korisnika</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+        
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+<form>
+    <h3>Zahtevi:</h3>
+    <table>
+        <tr>
+            <th>Korisnicko ime:</th>
+            <th>Mejl:</th>
+            <th>Prihvati zahtev:</th>
+            <th>Odbaci zahtev:</th>
+        </tr>
+        <tr *ngFor="let z of zahtevi">
+            <td>{{z.kor_ime}}</td>
+            <td>{{z.mejl}}</td>
+            <td>
+                <button (click)="prihvatiZahtev(z)">Prihvati</button>
+            </td>
+            <td>
+                <button (click)="odbaciZahtev(z)">Odbaci</button>
+            </td>
+        </tr>
+    </table>
+{{porukaZahtev}}
+    <br/>
+    <hr/>
+    <h3>Korisnici:</h3>
+    <table>
+        <tr>
+            <th>Korisnicko ime:</th>
+            <th>Mejl:</th>
+            <th>Obrisi korisnika:</th>
+            <th>Azuriraj korisnika:</th>
+            <th>Pogledaj radnike:</th>
+        </tr>
+        <tr *ngFor="let a of korisnici">
+            <td>{{a.kor_ime}}</td>
+            <td>{{a.mejl}}</td>
+            <td>
+                <button (click)="obrisiKorisnika(a)">Obrisi</button>
+            </td>
+            <td>
+                <button (click)="azurirajKorisnika(a)">Azuriraj</button>
+            </td>
+            <td *ngIf='a.tip=="agencija"'>
+                <button (click)="radnici(a)">Radnici</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<div>{{poruka}}</div>
+
+</div>
+<div class="footer">Projekat</div>
+</body></html>

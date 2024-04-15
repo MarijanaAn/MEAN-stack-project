@@ -1,0 +1,286 @@
+[{
+  "_id": {
+    "$oid": "647f6122511f0a49d3297e17"
+  },
+  "id": 1,
+  "ime": "Jovan",
+  "prezime": "Nikolic",
+  "mejl": "joca12@gmail.com",
+  "telefon": "0636875643",
+  "specijalizacija": "plocice",
+  "agencija": "kostic",
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "647f6179511f0a49d3297e18"
+  },
+  "id": 2,
+  "ime": "Petar",
+  "prezime": "Micic",
+  "mejl": "petar1@gmail.com",
+  "telefon": "0667483647",
+  "specijalizacija": "malterisanje",
+  "agencija": "kostic",
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "648b3458b55d1788e0be02c1"
+  },
+  "telefon": "0668459374",
+  "mejl": "joca@gmail.com",
+  "ime": "Jovan",
+  "prezime": "Petric",
+  "specijalizacija": "plocice",
+  "agencija": "kostic",
+  "__v": 0,
+  "zauzet": false
+},
+{
+  "_id": {
+    "$oid": "648b348ab55d1788e0be02cd"
+  },
+  "telefon": "0668459374",
+  "mejl": "miki1@gmail.com",
+  "ime": "Mihajlo",
+  "prezime": "Jovanovic",
+  "specijalizacija": "krecenje",
+  "agencija": "totalpro",
+  "__v": 0,
+  "zauzet": false
+},
+{
+  "_id": {
+    "$oid": "648b365bb55d1788e0be02dc"
+  },
+  "telefon": "0665937434",
+  "mejl": "igor@gmail.com",
+  "ime": "Igor",
+  "prezime": "Nastic",
+  "specijalizacija": "malterisanje",
+  "agencija": "kostic",
+  "__v": 0,
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "648b369fb55d1788e0be02e5"
+  },
+  "telefon": "0648455643",
+  "mejl": "filip@gmail.com",
+  "ime": "Filip",
+  "prezime": "Pavlovic",
+  "specijalizacija": "stolarija",
+  "agencija": "totalpro",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b38b9b55d1788e0be02f2"
+  },
+  "telefon": "0668459374",
+  "mejl": "dalibor@gmail.com",
+  "ime": "Dalibor",
+  "prezime": "Mitrovic",
+  "specijalizacija": "malterisanje",
+  "agencija": "kostic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b39bfb55d1788e0be02f9"
+  },
+  "telefon": "0668459374",
+  "mejl": "sergej@gmail.com",
+  "ime": "Sergej",
+  "prezime": "Savic",
+  "specijalizacija": "krecenje",
+  "agencija": "totalpro",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648b39d2b55d1788e0be0300"
+  },
+  "telefon": "0668459374",
+  "mejl": "vanja@gmail.com",
+  "ime": "Vanja",
+  "prezime": "Micic",
+  "specijalizacija": "parket",
+  "agencija": "totalpro",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6491f68fa4e6242037004b24"
+  },
+  "telefon": "0684759364",
+  "mejl": "danijel@gmail.com",
+  "ime": "Danijel",
+  "prezime": "Nikic",
+  "specijalizacija": "krecenje",
+  "agencija": "redom",
+  "__v": 0,
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "6491f6a9a4e6242037004b2b"
+  },
+  "telefon": "0684759846",
+  "mejl": "bogdan@gmail.com",
+  "ime": "Bogdan",
+  "prezime": "Petrovic",
+  "specijalizacija": "krecenje",
+  "agencija": "redom",
+  "__v": 0,
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "6491f6c5a4e6242037004b32"
+  },
+  "telefon": "0684753856",
+  "mejl": "milos@gmail.com",
+  "ime": "Milos",
+  "prezime": "Kostic",
+  "specijalizacija": "malterisanje",
+  "agencija": "redom",
+  "__v": 0,
+  "zauzet": true
+},
+{
+  "_id": {
+    "$oid": "6491f6eba4e6242037004b39"
+  },
+  "telefon": "0647583856",
+  "mejl": "stefan@gmail.com",
+  "ime": "Stefan",
+  "prezime": "Bozic",
+  "specijalizacija": "zidanje",
+  "agencija": "redom",
+  "__v": 0,
+  "zauzet": false
+},
+{
+  "_id": {
+    "$oid": "6491f7aea4e6242037004b42"
+  },
+  "telefon": "0658374632",
+  "mejl": "joki@gmail.com",
+  "ime": "Jovan",
+  "prezime": "Spasic",
+  "specijalizacija": "stolarija",
+  "agencija": "redom",
+  "zauzet": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6491f81ba4e6242037004b53"
+  },
+  "telefon": "0668459374",
+  "mejl": "miki123@gmail.com",
+  "ime": "Mihajlo",
+  "prezime": "Nikolic",
+  "specijalizacija": "malterisanje",
+  "agencija": "stevanovic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64921e0cdc087703753b9552"
+  },
+  "telefon": "0668459374",
+  "mejl": "boza@gmail.com",
+  "ime": "Boza",
+  "prezime": "Zdravkovic",
+  "specijalizacija": "stolarija",
+  "agencija": "stevanovic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64921e20dc087703753b9559"
+  },
+  "telefon": "0668459374",
+  "mejl": "laza@gmail.com",
+  "ime": "Lazar",
+  "prezime": "Vlahovic",
+  "specijalizacija": "stolarija",
+  "agencija": "stevanovic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64922267400326228da42f2b"
+  },
+  "telefon": "0636875643",
+  "mejl": "zoki@gmail.com",
+  "ime": "Zoran",
+  "prezime": "Persic",
+  "specijalizacija": "krecenje",
+  "agencija": "kostic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a7ea1b1be083e9fc0e85f2"
+  },
+  "telefon": "0636875643",
+  "mejl": "jovan12@gmail.com",
+  "ime": "Jovan",
+  "prezime": "Bozic",
+  "specijalizacija": "krecenje",
+  "agencija": "stevanovic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a7eae81be083e9fc0e85fd"
+  },
+  "telefon": "0636875643",
+  "mejl": "petar2@gmail.com",
+  "ime": "Petar",
+  "prezime": "Spasic",
+  "specijalizacija": "plocice",
+  "agencija": "stevanovic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a853bc5610b0b2bcad9ce3"
+  },
+  "telefon": "0648455643",
+  "mejl": "pedja@gmail.com",
+  "ime": "Predrag",
+  "prezime": "Mitrovic",
+  "specijalizacija": "stolarija",
+  "agencija": "kostic",
+  "zauzet": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a855705610b0b2bcad9cef"
+  },
+  "telefon": "0668459374",
+  "mejl": "mihajlo@gmail.com",
+  "ime": "Mihajlo",
+  "prezime": "Antic",
+  "specijalizacija": "stolarija",
+  "agencija": "kostic",
+  "zauzet": false,
+  "__v": 0
+}]

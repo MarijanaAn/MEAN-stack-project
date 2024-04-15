@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size:larger;
+    font-family :monospace;
+}
+
+.container{
+    
+    justify-content: center;
+    margin: 0vw 0vw ;  
+    padding: 30px;
+    background-color: rgb(252, 207, 189);
+}
+
+.item{
+    flex: 1;
+}
+
+.form_table {
+    display: flex;
+    flex-wrap : wrap;
+    justify-content: center;
+    ;
+}
+
+
+
+.menu{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: salmon;
+    justify-content: center;
+    line-height: 40px;
+}
+
+.menu_item{
+    flex: 1 1 10%;
+}
+
+.menu a{
+    text-decoration: none;
+    color:beige;
+    text-align: center;
+    padding: 10px;
+    background-color: salmon;
+}
+
+
+.menu .menu_item:hover{
+    color:crimson;
+    background-color: beige;
+    border-radius: 15px;
+}
+
+.menu .menu_item:active{
+    background-color: crimson;
+    position: relative;
+    top: 2px;
+}
+
+.menu a.active{
+    background-color: crimson;
+    color: beige;
+    border-radius: 15px;
+}
+
+form select{
+    padding: 5px;
+    width: 70%;
+}
+
+ form button{
+    padding : 0.3vw;
+  
+    border-radius: 15px;
+    color: beige;
+    background-color: salmon;
+} 
+
+form button:hover{
+    color: beige;
+    background-color: crimson;
+}
+
+form button:active{
+    position: relative;
+    top : 1px;
+}
+
+form input{
+    flex: 0 1 40%;
+    padding: 10px 10px;
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 1vw;
+    border-color: 1px solid burlywood;
+    overflow: hidden;
+  }
+
+button{
+    padding : 0.3vw;
+  
+    border-radius: 15px;
+    color: beige;
+    background-color: salmon;
+} 
+
+th, td{
+padding: 1vw;
+background-color: burlywood;
+border-bottom: 1px solid brown;
+  }
+
+img{
+border-radius: 5px;
+width: 5vw;
+height: 3vw;
+} 
+
+canvas{
+    background-color: white;
+}
+
+.form_table{
+    display: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form_item{
+    flex : 0 1 40%;
+    padding: 10px 10px;
+}
+
+.footer {
+    height: auto;
+    background-color: crimson;
+    color: beige;
+    position: fixed;
+    text-align: center;
+}
+
+.podaci {
+    background-color: salmon;
+    width: 50%;
+}

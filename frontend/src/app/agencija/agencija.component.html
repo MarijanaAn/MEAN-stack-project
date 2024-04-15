@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item active" routerLink="/agencija" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item active" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/radnici" *ngIf="this.korisnik!=null">Radnici</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+Dobro dosli, {{korisnik.naziv}}<br/>
+Za biranje zeljenih opcija koristite meni
+<br/>
+<div *ngIf="korisnik.slobodno==0 && !korisnik.zahtev">
+    <br/>
+    Nemate slobodnih mesta za radnike
+    <br/>
+    Ukoliko zelite, mozete poslati zahtev za otvaranje dodatnih radnih mesta
+    <br/>
+    <h3>Zahtev</h3>
+    <form>
+        <table>
+            <tr>
+            <td>Dodatna mesta:</td>
+            <td>
+                <input type="number" name="dodatno" [(ngModel)]="dodatno">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            <button (click)="posaljiZahtev()">Posalji</button></td>
+        </tr>
+        </table>
+    </form>
+    <div>{{poruka}}</div>
+</div>
+<br/>
+    <div>{{poruka}}</div>
+</div>
+
+<div class="footer">Projekat</div>
+</body>
+</html>

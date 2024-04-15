@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik.tip=='klijent'">Pocetna</a>
+        <a class="menu_item" routerLink="/agencija" *ngIf="this.korisnik.tip=='agencija'">Pocetna</a>
+        <a class="menu_item" routerLink="/adminpocetna" *ngIf="this.korisnik.tip=='admin'">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik.tip!='admin'">Profil</a>
+        <a class="menu_item"  routerLink="/radnici" *ngIf="agencija">Radnici</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf="klijent">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="klijent">Agencije</a>
+        <a class="menu_item active"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+<form *ngIf="klijent">
+    <table *ngIf="poslovi.length>0">
+        <tr>
+           <th>Agencija:</th>
+           <th>Objekat:</th> 
+           <th>Status:</th>
+        </tr>
+        <tr *ngFor="let p of poslovi">
+            <!-- <td *ngIf='p.agencija.slika==null'>
+                <img src="/assets/agencija.png" height="100px" width="100px"><br/>{{p.agencija.naziv}} 
+            </td>
+            <td *ngIf='p.agencija.slika!=null'>
+                <img [src]="p.agencija.slika" height="100px" width="100px"><br/>{{p.agencija.naziv}} 
+            </td> -->
+            <td>{{p.agencija.naziv}} </td>
+            <td>{{p.objekat.adresa}}</td>
+            <td>{{p.status}}</td>
+        </tr>
+    </table>
+    <div *ngIf="poslovi.length==0"> Nema nijednog posla u bazi</div>
+    <br/>
+    <h4>Filtriraj:</h4>
+    <input type="checkbox" name="aktivnic" [(ngModel)]="aktivnic">Aktivni  
+    <input type="checkbox" name="zavrseni" [(ngModel)]="zavrseni">Zavrseni  
+    <input type="checkbox" name="zahtevi" [(ngModel)]="zahtevi">Zahtevi
+    
+    <div *ngIf="aktivnic">
+        <h4>Aktivni</h4>
+        <div *ngIf="aktivni.length==0">Nema aktivnih poslova</div>
+    <table *ngIf="aktivni.length!=0">
+        <tr>
+            <th>Agencija:</th>
+            <th>Objekat:</th> 
+            <th>Pogledaj napredak:</th>
+         </tr>
+         <tr *ngFor="let p of aktivni">
+            <td *ngIf='p.agencija.slika==null'>
+                <img src="/assets/agencija.png" height="100px" width="100px"><br/>{{p.agencija.naziv}} 
+            </td>
+            <td *ngIf='p.agencija.slika!=null'>
+                <img [src]="p.agencija.slika" height="100px" width="100px"><br/>{{p.agencija.naziv}} 
+            </td>
+             <td>{{p.objekat.adresa}}</td>
+             <td >
+                <button (click)="pogledaj(p)">Pogledaj</button>
+             </td>
+         </tr>
+    </table>
+</div>
+
+    <div *ngIf="zavrseni">
+        <h4>Zavrseni</h4>
+        <div *ngIf="zavrseniP.length==0">Nema zavrsenih poslova</div>
+    <table *ngIf="zavrseniP.length!=0">
+         <tr>
+            <th>Agencija:</th>
+            <th>Objekat:</th> 
+            <th>Ostavi recenziju:</th>
+         </tr>
+         <tr *ngFor="let z of zavrseniP">
+            <td *ngIf='z.agencija.slika==null'>
+                <img src="/assets/agencija.png" height="100px" width="100px"><br/>{{z.agencija.naziv}} 
+            </td>
+            <td *ngIf='z.agencija.slika!=null'>
+                <img [src]="z.agencija.slika" height="100px" width="100px"><br/>{{z.agencija.naziv}} 
+            </td>
+             <td>{{z.objekat.adresa}}</td>
+             <td>
+                <button (click)="ostaviRecenziju(z.agencija)">Ostavi</button>
+             </td>
+         </tr>
+    </table>
+    </div>
+    <div *ngIf="zahtevi">
+        <h4>Zahtevi</h4>
+        <div *ngIf="zahteviK.length==0">Nema odgovora na poslate zahteve</div>
+    <table *ngIf="zahteviK.length!=0">
+        <tr>
+            <th>Agencija:</th>
+            <th>Objekat:</th>
+            <th>Ponuda:</th> 
+            <th>Prihvati ponudu:</th>
+            <th>Odbij ponudu:</th>
+         </tr>
+         <tr *ngFor="let z of zahteviK">
+             <td [class.prihvaceno]="z.prihvacen" [class.odbijeno]="!z.prihvacen" *ngIf='z.agencija.slika==null'>
+                <img src="/assets/agencija.png" height="100px" width="100px"><br/>{{z.agencija.naziv}} 
+            </td>
+            <td [class.prihvaceno]="z.prihvacen" [class.odbijeno]="!z.prihvacen" *ngIf='z.agencija.slika!=null'>
+                <img [src]="z.agencija.slika" height="100px" width="100px"><br/>{{z.agencija.naziv}} 
+            </td>
+             <td [class.prihvaceno]="z.prihvacen" [class.odbijeno]="!z.prihvacen">{{z.objekat.adresa}}
+                
+             </td>
+             <td [class.prihvaceno]="z.prihvacen" [class.odbijeno]="!z.prihvacen">{{z.ponuda}}</td>
+             <td *ngIf="z.prihvacen">
+                <button (click)="prihvatiPonudu(z)">Prihvati</button>
+             </td>
+             <td *ngIf="z.prihvacen">
+                <button (click)="odbijPonudu(z)">Odbij</button>
+             </td>
+         </tr>
+    </table>
+</div>
+
+</form>
+
+<form *ngIf="agencija">
+   <div *ngIf="poslovi.length!=0"> <h3>Zahtevi za saradnju</h3></div>
+    <table *ngIf="poslovi.length!=0">
+        
+        <tr>
+            <th>Klijent:</th>
+            <th>Adresa objekta:</th>
+            <th>Broj prostorija</th>
+            <th>Vreme:</th>
+            <th>Prihvati:</th>
+            <th>Odbij:</th>
+        </tr>
+        <tr *ngFor="let p of poslovi; let i = index">
+            <td>{{p.klijent.ime}} {{p.klijent.prezime}}</td>
+            <td>{{p.objekat.adresa}}</td>
+            <td> {{p.objekat.broj_prostorija}}</td>
+            <td>{{p.vreme}}</td>
+            <td>
+                Ponuda: <input type="number" name="ponuda" [(ngModel)]="p.ponuda">
+                <button (click)="prihvatiZahtev(p, i)">Prihvati</button>
+            </td>
+            <td>
+                <button (click)="odbijZahtev(p)">Odbij</button>
+            </td>
+        </tr>
+    </table>
+    <div>
+        {{poruka}}
+    </div>
+
+    <div *ngIf="poslovi.length==0"> <h3>Nema zahteva za saradnju</h3></div>
+    <div *ngIf="aktivni.length!=0"><h3>Aktivni poslovi</h3> </div>
+    <table *ngIf="aktivni.length!=0">
+        <tr>
+            <th>Klijent:</th>
+            <th>Vreme:</th>
+            <th>Pogledaj radove:</th>
+        </tr>
+        <tr *ngFor="let a of aktivni">
+            <td>{{a.klijent.kor_ime}}</td>
+            <td>{{a.vreme}}</td>
+            <td>
+                <button (click)="pogledaj(a)">Pogledaj</button>
+            </td>
+            
+        </tr>
+        
+    </table>
+    <div *ngIf="aktivni.length==0"><h3>Nema aktivnih poslova </h3> </div>
+
+</form>
+
+<div *ngIf="admin">
+<form *ngIf="admin">
+    <table *ngIf="zahteviOtkazivanje.length>0">
+        <h3>Zahtevi za otkazivanje posla</h3>
+        <tr>
+            <th>Klijent:</th>
+            <th>Agencija:</th>
+            <th>Razlog:</th>
+            <th>Radovi:</th>
+            <th>Prihvati otkazivanje:</th>
+            <th>Odbij otkazivanje:</th>
+        </tr>
+        <tr *ngFor="let p of zahteviOtkazivanje">
+            <td>{{p.klijent.ime}} {{p.klijent.prezime}}</td>
+            <td>{{p.agencija.naziv}}</td>
+            <td>{{p.razlog}}</td>
+            <td >
+                <button (click)="pogledaj(p)">Pogledaj</button>
+             </td>
+            <td><button (click)="prihvatiOtkazivanje(p)">Prihvati</button></td>
+            <td><button (click)="odbijOtkazivanje(p)">Odbij</button></td>
+        </tr>
+    </table>
+    <div *ngIf="zahteviOtkazivanje.length==0"> Nema zahteva za otkazivanje posla</div>
+
+<table>
+    <h3>Svi poslovi</h3>
+    <tr>
+        <th>Klijent:</th>
+        <th>Agencija:</th>
+        <th>Status posla:</th>
+    </tr>
+    <tr *ngFor="let p of poslovi">
+        <td>{{p.klijent.ime}} {{p.klijent.prezime}}</td>
+        <td>{{p.agencija.naziv}}</td>
+        <td *ngIf="p.status!=null">{{p.status}}</td>
+    </tr>
+</table>
+</form>
+<div [class.levo]>
+<h4>Filtriraj:</h4>
+    <input type="checkbox" name="aktivnic" [(ngModel)]="aktivnic">Aktivni  
+    <input type="checkbox" name="zavrseni" [(ngModel)]="zavrseni">Zavrseni  
+    <input type="checkbox" name="zahtevi" [(ngModel)]="zahtevi">Zahtevi
+    <input type="checkbox" name="otkazanic" [(ngModel)]="otkazanic">Otkazani
+    <input type="checkbox" name="ponudec" [(ngModel)]="ponudec">Ponude
+    
+    <div *ngIf="aktivnic">
+        <h4>Aktivni</h4>
+        <div *ngIf="aktivni.length==0">Nema aktivnih poslova</div>
+    <table *ngIf="aktivni.length!=0">
+        <tr>
+            <th>Klijent:</th>
+            <th>Agencija:</th>
+            <th>Objekat:</th> 
+            <th>Pogledaj napredak:</th>
+         </tr>
+         <tr *ngFor="let p of aktivni">
+            <td>{{p.klijent.ime}} {{p.klijent.prezime}}</td>
+             <td>{{p.agencija.naziv}}</td>
+             <td>{{p.objekat.adresa}}</td>
+             <td >
+                <button (click)="pogledaj(p)">Pogledaj</button>
+             </td>
+         </tr>
+    </table>
+</div>
+<div *ngIf="zavrseni">
+    <h4>Zavrseni</h4>
+    <div *ngIf="zavrseniP.length==0">Nema zavrsenih poslova</div>
+<table *ngIf="zavrseniP.length!=0">
+     <tr>
+        <th>Klijent</th>
+        <th>Agencija:</th>
+        <th>Objekat:</th> 
+        <th>Ostavi recenziju:</th>
+     </tr>
+     <tr *ngFor="let z of zavrseniP">
+        <td>{{z.klijent.ime}} {{z.klijent.prezime}}</td>
+        <td>{{z.agencija.naziv}}</td>
+         <td>{{z.objekat.adresa}}</td>
+         <td>
+            <button (click)="pogledajRecenziju(z)">Ostavi</button>
+         </td>
+     </tr>
+</table>
+</div>
+<div *ngIf="zahtevi">
+    <h4>Zahtevi</h4>
+    <div *ngIf="zahteviSaradnja.length==0">Nema odgovora na poslate zahteve</div>
+<table *ngIf="zahteviSaradnja.length!=0">
+    <tr>
+        <th>Klijent</th>
+        <th>Agencija:</th>
+        <th>Objekat:</th>
+        <th>Vreme:</th>
+        <th>Skica:</th>
+     </tr>
+     <tr *ngFor="let z of zahteviSaradnja">
+        <td>{{z.klijent.ime}} {{z.klijent.prezime}}</td>
+        <td>{{z.agencija.naziv}}</td>
+         <td>{{z.objekat.adresa}}</td>
+         <td>{{z.vreme}}</td>
+         <td><button (click)="pogledajSkicu(z.objekat)">Pogledaj</button></td>
+     </tr>
+</table>
+</div>
+<div *ngIf="otkazanic">
+    <h4>Otkazani</h4>
+    <div *ngIf="otkazani.length==0">Nema otkazanih poslova</div>
+<table *ngIf="otkazani.length!=0">
+     <tr>
+        <th>Klijent</th>
+        <th>Agencija:</th>
+        <th>Objekat:</th> 
+        <th>Razlog:</th>
+     </tr>
+     <tr *ngFor="let z of otkazani">
+        <td>{{z.klijent.ime}} {{z.klijent.prezime}}</td>
+        <td>{{z.agencija.naziv}}</td>
+         <td>{{z.objekat.adresa}}</td>
+         <td>{{z.razlog}}</td>
+     </tr>
+</table>
+</div>
+<div *ngIf="ponudec">
+    <h4>Ponude</h4>
+    <div *ngIf="ponude.length==0">Nema ponuda</div>
+<table *ngIf="ponude.length!=0">
+     <tr>
+        <th>Klijent</th>
+        <th>Agencija:</th>
+        <th>Objekat:</th> 
+        <th>Skica:</th>
+        <th>Zahtev:</th>
+        <th>Ponuda:</th>
+        
+     </tr>
+     <tr *ngFor="let z of ponude">
+        <td>{{z.klijent.ime}} {{z.klijent.prezime}}</td>
+        <td>{{z.agencija.naziv}}</td>
+         <td>{{z.objekat.adresa}}</td>
+         <td><button (click)="pogledajSkicu(z.objekat)">Pogledaj</button></td>
+         <td>{{z.zahtev}}</td>
+         <td *ngIf="z.ponuda!=null">{{z.ponuda}}</td>
+     </tr>
+</table>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

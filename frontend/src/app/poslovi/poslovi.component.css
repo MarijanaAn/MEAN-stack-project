@@ -1,0 +1,16 @@
+.prihvaceno {
+    color: green;
+}
+
+.odbijeno {
+    color:red;
+}
+
+canvas{
+    background-color: white;
+}
+
+.levo{
+    text-align: left;
+    width: 50%;
+}

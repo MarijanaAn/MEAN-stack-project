@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prijava</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="klijent">Pocetna</a>
+        <a class="menu_item" routerLink="/agencija" *ngIf="agencija">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item  active"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf="klijent">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="klijent">Agencije</a>
+        <a class="menu_item"  routerLink="/radnici" *ngIf="agencija">Radnici</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+<form>
+    <table >
+        <tr>
+            <td>Korisnicko ime:</td>
+            <td>
+                <input type="text" name="kor_ime" [(ngModel)]="kor_ime">
+            </td>
+        </tr>
+        <tr>
+            <td>Stara lozinka:</td>
+            <td>
+                <input type="password" name="stara" [(ngModel)]="stara">
+            </td>
+        </tr>
+        <tr>
+            <td>Nova lozinka:</td>
+            <td>
+                <input type="password" name="lozinka" [(ngModel)]="lozinka">
+            </td>
+        </tr>
+        <tr>
+            <td>Potvrda lozinke:</td>
+            <td>
+                <input type="password" name="potvrda" [(ngModel)]="potvrda">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="promeniLozinku()">Promeni</button>
+            </td>
+        </tr>
+    </table>
+    <div>
+        {{poruka}}
+    </div>
+</form>
+</div>
+</body>
+</html>
+

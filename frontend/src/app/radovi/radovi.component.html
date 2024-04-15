@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf='this.korisnik.tip == "klijent"'>Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf='this.korisnik.tip == "klijent"'>Agencije</a>
+        <a class="menu_item"  routerLink="/radnici" *ngIf='this.korisnik.tip == "agencija"'>Radnici</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <button (click)="nazad()">Nazad</button><br/>
+    <canvas #canvas style="border: 2px solid" width="200" height="200" ></canvas>
+    <br/>
+    <div *ngIf='this.gotoveSobe==this.objekat.broj_prostorija && this.korisnik.tip=="klijent"'>
+        Posao je zavrsen, mozete platiti troskove<br/>
+        <button (click)="plati()">Plati</button>
+    </div>
+<br/>
+    <div *ngIf='this.korisnik.tip=="klijent"'>
+        <h3>Zahtev za otkazivanje posla</h3>
+        <table>
+        <tr>
+            <th>Razlog otkazivanja:</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" [(ngModel)]="razlog" name="razlog">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)="otkazi()">Otkazi</button>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+    <div *ngIf='(this.posao.radnici.length==0 || this.posao.radnici==null) && this.korisnik.tip=="agencija" && this.slobodni.length >= this.objekat.broj_prostorija'>
+<h3>Dodajte radnike na posao</h3>
+<form>
+<table>
+<tr>
+    <th>Ime i prezime</th>
+    <th>Specijalizacija</th>
+    <th>Dodaj</th>
+</tr>
+<tr *ngFor="let s of slobodni">
+    <td>{{s.ime}} {{s.prezime}}</td>
+    <td>{{s.specijalizacija}}</td>
+    <td>
+        <input type="checkbox" name="cekiran" [(ngModel)]="s.cekiran">
+    </td>
+</tr>
+<button (click)="dodajRadnike()" >Dodaj radnike</button>
+        </table>
+    </form>
+    </div>
+    <div *ngIf='this.posao.radnici.length>0 && this.korisnik.tip=="agencija"'>
+        <h3>Zapocni sobu</h3>
+       <br/>
+        <input type="radio" name="soba" [(ngModel)]="soba" value="1">1       
+        <div *ngIf="this.objekat.broj_prostorija>1"><input type="radio" name="soba" [(ngModel)]="soba" value="2">2</div>
+        <div *ngIf="this.objekat.broj_prostorija==3"><input type="radio" name="soba" [(ngModel)]="soba" value="3">3</div>
+    <button (click)="zapocniSobu()">Zapocni</button>
+    <h3>Zavrsi sobu</h3>
+       <br/>
+        <input type="radio" name="soba2" [(ngModel)]="soba2" value="1">1       
+        <div *ngIf="this.objekat.broj_prostorija>1"><input type="radio" name="soba2" [(ngModel)]="soba2" value="2">2</div>
+        <div *ngIf="this.objekat.broj_prostorija==3"><input type="radio" name="soba2" [(ngModel)]="soba2" value="3">3</div>
+    <button (click)="zavrsiSobu()">Zavrsi</button>
+    </div>
+
+<div>{{poruka}}</div>
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

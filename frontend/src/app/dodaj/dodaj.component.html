@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/adminpocetna" *ngIf="admin">Pocetna</a>
+        <!-- <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a> -->
+        <!-- <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a> -->
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item active" routerLink="/dodaj" *ngIf="admin">Dodaj korisnika</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+        
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    
+<h3>Dodaj korisnika:</h3>
+<form>
+    <!-- <div> <button (click)="nazad()">Nazad</button></div> -->
+
+    <table >
+        <tr>
+            <td>Korisnicko ime:</td>
+            <td>
+                <input type="text" name="kor_ime" [(ngModel)]="kor_ime" required="true">
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka:</td>
+            <td>
+                <input type="password" name="lozinka" [(ngModel)]="lozinka" required="true">
+            </td>
+        </tr>
+        <tr>
+            <td>Potvrda lozinke:</td>
+            <td>
+                <input type="password" name="potvrda" [(ngModel)]="potvrda" required="true">
+            </td>
+        </tr>
+        <tr>
+            <td>Kontakt telefon:</td>
+            <td>
+                <input type="text" name="telefon" [(ngModel)]="telefon" required="true">
+            </td>
+        </tr>
+        <tr>
+            <td>Mejl:</td>
+            <td>
+                <input type="text" name="mejl" [(ngModel)]="mejl" required="true">
+            </td>
+        </tr>
+        <tr>
+            <td>Tip:</td>
+            <td>
+                <input type="radio" name="tip" [(ngModel)]="tip" value="agencija">
+                Agencija
+                <input type="radio" name="tip" [(ngModel)]="tip" value="klijent">
+                Klijent
+            </td>
+        </tr>
+        <tr>
+            <td>Slika ili logotip agencije:</td>
+            <td>
+                <div>
+                    <div *ngIf='slika=="" || slika==null && tip=="agencija"'>
+                        <img height="100px" width="100px" src="/assets/agencija.png">
+                    </div>
+                    <div *ngIf='slika=="" || slika==null && tip=="klijent"'>
+                        <img height="100px" width="100px" src="/assets/klijent.png">
+                    </div>
+                    <div *ngIf='slika!="" && slika!=null '>
+                        <img [src]="slika">
+                    </div>
+                    <input style="display: none" name="slika" [(ngModel)]="slika" type="file"  accept=".jpg,.png" (change)="oznaciFajl($event)" #selectFile>
+                    <button (click)="selectFile.click()">Izaberi sliku</button>
+                </div>
+            </td>
+        </tr>
+        <hr/>
+        <h4>Obavezno za klijenta</h4>
+        <tr>
+            <td>Ime:</td>
+            <td>
+                <input type="text" name="ime" [(ngModel)]="ime">
+            </td>
+        </tr>
+        <tr>
+            <td>Prezime:</td>
+            <td>
+                <input type="text" name="prezime" [(ngModel)]="prezime">
+            </td>
+        </tr>
+        <hr/>
+        <h4>Obavezno za agenciju</h4>
+        <tr>
+            <td>Naziv:</td>
+            <td>
+                <input type="text" name="naziv" [(ngModel)]="naziv">
+            </td>
+        </tr>
+        <tr>
+            <td>Adresa:</td>
+            <td>
+                <input type="text" name="adresa" [(ngModel)]="adresa">
+            </td>
+        </tr>
+        <tr>
+            <td>Maticni broj:</td>
+            <td>
+                <input type="text" name="maticni_broj" [(ngModel)]="maticni_broj">
+            </td>
+        </tr>
+        <tr>
+            <td>Opis:</td>
+            <td>
+                <input type="text" name="opis" [(ngModel)]="opis">
+            </td>
+        </tr>
+    </table>
+    <div>
+        <button (click)="dodajKorisnika()">Dodaj</button>
+    </div>
+    <div>
+        {{poruka}}
+    </div>
+</form>
+
+</div>
+
+<div class="footer">Projekat</div>
+</body></html>

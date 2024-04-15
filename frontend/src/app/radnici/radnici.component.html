@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/agencija" *ngIf="this.korisnik.tip=='agencija'">Pocetna</a>
+        <a class="menu_item" routerLink="/adminpocetna" *ngIf="this.korisnik.tip=='admin'">Pocetna</a>
+        <!-- <a class="menu_item" routerLink="/agencija" *ngIf="agencija">Pocetna</a> -->
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik.tip=='agencija'">Profil</a>
+        <!-- <a class="menu_item"  routerLink="/objekti" *ngIf="klijent">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="klijent">Agencije</a> -->
+        <a class="menu_item  active"  routerLink="/radnici" *ngIf="this.korisnik!=null">Radnici</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <div *ngIf="this.korisnik.tip=='admin'">
+        <h3>Zahtev za dodatnim radnim mestima</h3>
+        <div *ngIf="!agen.zahtev || agen.zahtev==null">
+            Nema zahteva za dodatna radna mesta
+        </div>
+        <div *ngIf="agen.zahtev">
+            <form>
+                <table>
+                    <tr>
+                        <th>Dodatna mesta:</th>
+                        <th>Prihvati:</th>
+                        <th>Odbaci:</th>
+                    </tr>
+                    <tr>
+                        <td>{{agen.dodatno}}</td>
+                        <td><button (click)="prihvatiZahtev()">Prihvati</button></td>
+                        <td>
+                            <button (click)="odbaciZahtev()">Odbaci</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <h3>Radnici:</h3>
+    <form>
+        <table>
+            <tr *ngIf="radnici.length==0">
+                <td>U ovoj agenciji nema radnika</td>
+            </tr>
+            <tr *ngIf="radnici.length!=0">
+                <th>Ime:</th>
+                <th>Prezime:</th>
+                <th>Mejl:</th>
+                <th>Telefon:</th>
+                <th>Specijalizacija:</th>
+                <th>Obrisi radnika:</th>
+                <th *ngIf="azuriraj">Azuriraj:</th>
+            </tr>
+            <tr *ngFor="let r of radnici">
+                <td>{{r.ime}}</td>
+                <td>{{r.prezime}}</td>
+                <td>{{r.mejl}}</td>
+                <td>{{r.telefon}}</td>
+                <td>{{r.specijalizacija}}</td>
+                <td>
+                    <button (click)="obrisiRadnika(r)">
+                       Obrisi 
+                    </button>
+                </td>
+                <td *ngIf="azuriraj">
+                    <button (click)="azurirajRadnika(r)">Azuriraj</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <input type="checkbox" name="azuriraj" [(ngModel)]="azuriraj">Azuriraj radnika
+<!-- <h3 *ngIf="azuriraj">Azuriraj radnika</h3> -->
+    <form *ngIf="radnici.length!=0 && azuriraj">
+        <table>
+            <tr>
+                <tr>
+                    <td>Ime:</td>
+                    <td>
+                        <input type="text" name="ime" [(ngModel)]="ime">
+                    </td> 
+                </tr>
+            <tr>
+                <td>Prezime:</td>
+                <td>
+                    <input type="text" name="prezime" [(ngModel)]="prezime">
+                </td> 
+            </tr>
+            <tr>
+                <td>Mejl:</td>
+                <td>
+                    <input type="text" name="mejl" [(ngModel)]="mejl">
+                </td> 
+            </tr>
+            <tr>
+                <td>Telefon:</td>
+                <td>
+                    <input type="text" name="telefon" [(ngModel)]="telefon">
+                </td> 
+            </tr>
+            <tr>
+                <td>Specijalizacija:</td>
+                <td>
+                    <input type="text" name="specijalizacija" [(ngModel)]="specijalizacija">
+                </td> 
+            </tr>
+        </table>
+    </form>
+
+<div *ngIf="(this.korisnik.tip=='admin' && this.agen.slobodno>0) || (this.korisnik.tip=='agencija' && this.korisnik.slobodno>0)">
+<h3>Dodaj radnika</h3>
+<form>
+<table>
+    <tr>
+        <tr>
+            <td>Ime:</td>
+            <td>
+                <input type="text" name="ime" [(ngModel)]="ime">
+            </td> 
+        </tr>
+    <tr>
+        <td>Prezime:</td>
+        <td>
+            <input type="text" name="prezime" [(ngModel)]="prezime">
+        </td> 
+    </tr>
+    <tr>
+        <td>Mejl:</td>
+        <td>
+            <input type="text" name="mejl" [(ngModel)]="mejl">
+        </td> 
+    </tr>
+    <tr>
+        <td>Telefon:</td>
+        <td>
+            <input type="text" name="telefon" [(ngModel)]="telefon">
+        </td> 
+    </tr>
+    <tr>
+        <td>Specijalizacija:</td>
+        <td>
+            <input type="text" name="specijalizacija" [(ngModel)]="specijalizacija">
+        </td> 
+    </tr>
+    <tr colspan="2">
+        <td colspan="2">
+            <button (click)="dodajRadnika()">Dodaj radnika</button>
+        </td>
+    </tr>
+</table>
+<div>
+    {{poruka}}
+</div>
+</form>
+</div>
+<div *ngIf="(this.korisnik.tip=='admin' && this.agen.slobodno==0) || (this.korisnik.tip=='agencija' && this.korisnik.slobodno==0)">
+    Nema vise slobodnih mesta
+</div>
+
+<!-- <form *ngIf="nedodeljeni.length>0">
+    <table>
+        <tr>
+            <th>Ime:</th>
+            <th>Prezime:</th>
+            <th>Mejl:</th>
+            <th>Telefon:</th>
+            <th>Specijalizacija:</th>
+            <th>Dodaj:</th>
+        </tr>
+        <tr *ngFor="let n of nedodeljeni">
+            <td>{{n.ime}}</td>
+            <td>{{n.prezime}}</td>
+            <td>{{n.mejl}}</td>
+            <td>{{n.telefon}}</td>
+            <td>{{n.specijalizacija}}</td>
+            <td>
+                <button (click)="dodaj(n.id)">
+                    Dodaj
+                </button>
+            </td>
+        </tr>
+    </table>
+</form> -->
+
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

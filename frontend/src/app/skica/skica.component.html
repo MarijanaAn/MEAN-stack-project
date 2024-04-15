@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf="this.korisnik!=null">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="this.korisnik!=null">Agencije</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <button (click)="nazad()">Nazad</button> <br/>
+    Tip: {{objekat.tip}} <br/>
+    Adresa: {{objekat.adresa}} <br/>
+    Broj prostorija: {{objekat.broj_prostorija }} <br/>
+    Kvadratura: {{objekat.kvadratura}} <br/>
+    <canvas #canvas style="border: 2px solid" width="200" height="200" ></canvas>
+    <br/>
+<div *ngIf="korisnik.tip=='klijent'">
+<h3>Azuriraj objekat</h3>
+<form>
+    <table>
+        <tr>
+        <td>Tip:</td>
+        <td>
+            <input type="radio" name="tip" [(ngModel)]="tip" value="stan">
+            Stan
+            <input type="radio" name="tip" [(ngModel)]="tip" value="kuca">
+            Kuca
+        </td> 
+        </tr>
+        <tr>
+            <td>Adresa:</td>
+            <td>
+                <input type="text" name="adresa" [(ngModel)]="adresa">
+            </td> 
+        </tr>
+        <tr>
+            <td>Broj prostorija:</td>
+            <td>
+                <input type="text" name="broj" [(ngModel)]="broj">
+            </td> 
+        </tr>
+        <!-- <tr>
+            <td>Kvadratura:</td>
+            <td>
+                <input type="text" name="kvadratura" [(ngModel)]="kvadratura">
+            </td> 
+        </tr> -->
+        <!-- <tr>
+            <td>Skica:</td>
+            <td>
+                <h3>Unesite dimenzije[u metrima]</h3>
+            <div *ngIf="broj>0">
+                Dimenzije prve sobe
+                <input type="number" name="duzina1" [(ngModel)]="duzina1" >
+                <input type="number" name="sirina1" [(ngModel)]="sirina1">
+            </div>
+            <div *ngIf="broj>1">
+                Dimenzije druge sobe
+                <input type="number" name="duzina2" [(ngModel)]="duzina2">
+                <input type="number" name="sirina2" [(ngModel)]="sirina2">
+            </div>
+            <div *ngIf="broj>2">
+                Dimenzije trece sobe
+                <input type="number" name="duzina3" [(ngModel)]="duzina3">
+                <input type="number" name="sirina3" [(ngModel)]="sirina3">
+            </div>
+            </td>
+        </tr> -->
+        <tr colspan="2">
+            <td colspan="2">
+                <button (click)="azuriraj()">Azuriraj</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+<div>{{poruka}}</div>
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

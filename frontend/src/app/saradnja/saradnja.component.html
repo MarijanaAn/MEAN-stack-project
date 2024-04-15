@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf="this.korisnik!=null">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="this.korisnik!=null">Agencije</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <form>
+        <table>
+            <tr>
+                <td>Objekat:</td>
+                <td>
+                    <select [(ngModel)]="objekat" name="objekat">
+                        <option *ngFor="let o of objekti" [value]="o._id">{{o.adresa}}</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Agencija:</td>
+                <td>
+                <select [(ngModel)]="agencija" name="agencija">
+                    <option *ngFor="let a of agencije" [value]="a.kor_ime">{{a.naziv}}</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td>Vreme:</td>
+                <td>
+                    <input type="number" [(ngModel)]="vreme" name="vreme">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button (click)="traziSaradnju()">Potvrdi</button>
+                </td>
+            </tr>
+        </table>
+        <div>{{poruka}}</div>
+        <div> 
+            <button (click)="nazad()">Nazad</button>
+        </div>
+    </form>
+
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

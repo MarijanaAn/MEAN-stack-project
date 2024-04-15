@@ -1,0 +1,457 @@
+[{
+  "_id": {
+    "$oid": "649204cca4e6242037004b9d"
+  },
+  "radnici": null,
+  "id": 1,
+  "klijent": "nemanja",
+  "agencija": "stevanovic",
+  "objekat": "64920430a4e6242037004b8b",
+  "vreme": 5,
+  "__v": 0,
+  "ponuda": 150,
+  "zahtev": "prihvacen",
+  "status": "zavrsen",
+  "nedovoljno": true
+},
+{
+  "_id": {
+    "$oid": "64922345400326228da42f4b"
+  },
+  "radnici": [],
+  "id": 1,
+  "klijent": "maja",
+  "agencija": "redom",
+  "objekat": "64920265a4e6242037004b73",
+  "vreme": 6,
+  "status": "ponuda",
+  "__v": 0,
+  "ponuda": 340,
+  "zahtev": "prihvacen"
+},
+{
+  "_id": {
+    "$oid": "6492237c400326228da42f5d"
+  },
+  "radnici": [],
+  "id": 1,
+  "klijent": "pera",
+  "agencija": "redom",
+  "objekat": "64920381a4e6242037004b82",
+  "vreme": 7,
+  "status": "ponuda",
+  "__v": 0,
+  "ponuda": 500,
+  "zahtev": "prihvacen"
+},
+{
+  "_id": {
+    "$oid": "64aaef755610b0b2bcada2a5"
+  },
+  "radnici": [
+    {
+      "_id": "648b369fb55d1788e0be02e5",
+      "telefon": "0648455643",
+      "mejl": "filip@gmail.com",
+      "ime": "Filip",
+      "prezime": "Pavlovic",
+      "specijalizacija": "stolarija",
+      "agencija": "totalpro",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "daca",
+  "agencija": "totalpro",
+  "objekat": "64909956098a7bc6307c759a",
+  "vreme": 4,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 400,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaef835610b0b2bcada2b2"
+  },
+  "radnici": null,
+  "klijent": "daca",
+  "agencija": "redom",
+  "objekat": "64aae9b45610b0b2bcada1da",
+  "vreme": 5,
+  "status": "zavrsen",
+  "__v": 0,
+  "ponuda": 320,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaef905610b0b2bcada2b7"
+  },
+  "radnici": [
+    {
+      "_id": "647f6122511f0a49d3297e17",
+      "id": 1,
+      "ime": "Jovan",
+      "prezime": "Nikolic",
+      "mejl": "joca12@gmail.com",
+      "telefon": "0636875643",
+      "specijalizacija": "plocice",
+      "agencija": "kostic",
+      "zauzet": false,
+      "cekiran": true
+    },
+    {
+      "_id": "647f6179511f0a49d3297e18",
+      "id": 2,
+      "ime": "Petar",
+      "prezime": "Micic",
+      "mejl": "petar1@gmail.com",
+      "telefon": "0667483647",
+      "specijalizacija": "malterisanje",
+      "agencija": "kostic",
+      "zauzet": false,
+      "cekiran": true
+    }
+  ],
+  "klijent": "daca",
+  "agencija": "kostic",
+  "objekat": "64aaef2e5610b0b2bcada29c",
+  "vreme": 5,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 270,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaef9d5610b0b2bcada2bc"
+  },
+  "radnici": [],
+  "klijent": "daca",
+  "agencija": "stevanovic",
+  "objekat": "64aaef665610b0b2bcada29f",
+  "vreme": 7,
+  "status": "ponuda",
+  "__v": 0,
+  "ponuda": 330,
+  "zahtev": "prihvacen"
+},
+{
+  "_id": {
+    "$oid": "64aaf1e35610b0b2bcada2ca"
+  },
+  "radnici": [
+    {
+      "_id": "648b39d2b55d1788e0be0300",
+      "telefon": "0668459374",
+      "mejl": "vanja@gmail.com",
+      "ime": "Vanja",
+      "prezime": "Micic",
+      "specijalizacija": "parket",
+      "agencija": "totalpro",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "pera",
+  "agencija": "totalpro",
+  "objekat": "64920381a4e6242037004b82",
+  "vreme": 5,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 370,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf1f05610b0b2bcada2cf"
+  },
+  "radnici": [],
+  "klijent": "pera",
+  "agencija": "redom",
+  "objekat": "64aad5765610b0b2bcada1ab",
+  "vreme": 6,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 150,
+  "zahtev": "prihvacen",
+  "nedovoljno": true
+},
+{
+  "_id": {
+    "$oid": "64aaf1fa5610b0b2bcada2d4"
+  },
+  "radnici": [
+    {
+      "_id": "648b365bb55d1788e0be02dc",
+      "telefon": "0665937434",
+      "mejl": "igor@gmail.com",
+      "ime": "Igor",
+      "prezime": "Nastic",
+      "specijalizacija": "malterisanje",
+      "agencija": "kostic",
+      "__v": 0,
+      "zauzet": false,
+      "cekiran": true
+    },
+    {
+      "_id": "64922267400326228da42f2b",
+      "telefon": "0636875643",
+      "mejl": "zoki@gmail.com",
+      "ime": "Zoran",
+      "prezime": "Persic",
+      "specijalizacija": "krecenje",
+      "agencija": "kostic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "pera",
+  "agencija": "kostic",
+  "objekat": "64aae8765610b0b2bcada1b1",
+  "vreme": 4,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 325,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf2025610b0b2bcada2d9"
+  },
+  "radnici": [
+    {
+      "_id": "64921e0cdc087703753b9552",
+      "telefon": "0668459374",
+      "mejl": "boza@gmail.com",
+      "ime": "Boza",
+      "prezime": "Zdravkovic",
+      "specijalizacija": "stolarija",
+      "agencija": "stevanovic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    },
+    {
+      "_id": "64921e20dc087703753b9559",
+      "telefon": "0668459374",
+      "mejl": "laza@gmail.com",
+      "ime": "Lazar",
+      "prezime": "Vlahovic",
+      "specijalizacija": "stolarija",
+      "agencija": "stevanovic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    },
+    {
+      "_id": "64a7eae81be083e9fc0e85fd",
+      "telefon": "0636875643",
+      "mejl": "petar2@gmail.com",
+      "ime": "Petar",
+      "prezime": "Spasic",
+      "specijalizacija": "plocice",
+      "agencija": "stevanovic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "pera",
+  "agencija": "stevanovic",
+  "objekat": "64aae9205610b0b2bcada1c4",
+  "vreme": 7,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 380,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf3e45610b0b2bcada2fc"
+  },
+  "radnici": [
+    {
+      "_id": "648b39bfb55d1788e0be02f9",
+      "telefon": "0668459374",
+      "mejl": "sergej@gmail.com",
+      "ime": "Sergej",
+      "prezime": "Savic",
+      "specijalizacija": "krecenje",
+      "agencija": "totalpro",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "maja",
+  "agencija": "totalpro",
+  "objekat": "64920265a4e6242037004b73",
+  "vreme": 3,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 399,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf3ec5610b0b2bcada2fe"
+  },
+  "radnici": [],
+  "klijent": "maja",
+  "agencija": "redom",
+  "objekat": "64aaf3ae5610b0b2bcada2eb",
+  "vreme": 5,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 240,
+  "zahtev": "prihvacen",
+  "nedovoljno": true
+},
+{
+  "_id": {
+    "$oid": "64aaf40c5610b0b2bcada300"
+  },
+  "radnici": [],
+  "klijent": "maja",
+  "agencija": "kostic",
+  "objekat": "64aaf3bd5610b0b2bcada2ee",
+  "vreme": 6,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 430,
+  "zahtev": "prihvacen",
+  "nedovoljno": true
+},
+{
+  "_id": {
+    "$oid": "64aaf4155610b0b2bcada302"
+  },
+  "radnici": [
+    {
+      "_id": "6491f81ba4e6242037004b53",
+      "telefon": "0668459374",
+      "mejl": "miki123@gmail.com",
+      "ime": "Mihajlo",
+      "prezime": "Nikolic",
+      "specijalizacija": "malterisanje",
+      "agencija": "stevanovic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    },
+    {
+      "_id": "64a7ea1b1be083e9fc0e85f2",
+      "telefon": "0636875643",
+      "mejl": "jovan12@gmail.com",
+      "ime": "Jovan",
+      "prezime": "Bozic",
+      "specijalizacija": "krecenje",
+      "agencija": "stevanovic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "maja",
+  "agencija": "stevanovic",
+  "objekat": "64aaf3d15610b0b2bcada2f1",
+  "vreme": 8,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 265,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf4e55610b0b2bcada329"
+  },
+  "radnici": [],
+  "klijent": "nemanja",
+  "agencija": "totalpro",
+  "objekat": "64920430a4e6242037004b8b",
+  "vreme": 6,
+  "status": "ponuda",
+  "__v": 0,
+  "ponuda": 245,
+  "zahtev": "prihvacen"
+},
+{
+  "_id": {
+    "$oid": "64aaf4ed5610b0b2bcada32b"
+  },
+  "radnici": [],
+  "klijent": "nemanja",
+  "agencija": "redom",
+  "objekat": "64aaf4355610b0b2bcada318",
+  "vreme": 7,
+  "status": "zahtev za saradnju",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf4f45610b0b2bcada32d"
+  },
+  "radnici": [
+    {
+      "_id": "648b38b9b55d1788e0be02f2",
+      "telefon": "0668459374",
+      "mejl": "dalibor@gmail.com",
+      "ime": "Dalibor",
+      "prezime": "Mitrovic",
+      "specijalizacija": "malterisanje",
+      "agencija": "kostic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    },
+    {
+      "_id": "64a853bc5610b0b2bcad9ce3",
+      "telefon": "0648455643",
+      "mejl": "pedja@gmail.com",
+      "ime": "Predrag",
+      "prezime": "Mitrovic",
+      "specijalizacija": "stolarija",
+      "agencija": "kostic",
+      "zauzet": false,
+      "__v": 0,
+      "cekiran": true
+    }
+  ],
+  "klijent": "nemanja",
+  "agencija": "kostic",
+  "objekat": "64aaf4ae5610b0b2bcada31b",
+  "vreme": 4,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 325,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+},
+{
+  "_id": {
+    "$oid": "64aaf4fb5610b0b2bcada32f"
+  },
+  "radnici": [],
+  "klijent": "nemanja",
+  "agencija": "stevanovic",
+  "objekat": "64aaf4d75610b0b2bcada31e",
+  "vreme": 8,
+  "status": "aktivan",
+  "__v": 0,
+  "ponuda": 240,
+  "zahtev": "prihvacen",
+  "nedovoljno": false
+}]

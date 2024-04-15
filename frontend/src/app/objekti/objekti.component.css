@@ -1,0 +1,10 @@
+canvas{
+    background-color: white;
+}
+
+.upload{
+    border-radius: 1vw;
+    border-color: brown;
+    background-color: burlywood;
+    width :40%;
+}

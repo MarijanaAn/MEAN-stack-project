@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <a class="menu_item"  routerLink="/objekti" *ngIf="this.korisnik!=null">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="this.korisnik!=null">Agencije</a>
+        <a class="menu_item active"  routerLink="/recenzije" *ngIf="this.agencija!=null">Recenzije</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <div *ngIf="recenzije.length==0 || recenzije==null">Nema recenzija za datu agenciju</div>
+    <div *ngIf="recenzije.length>0 || recenzije!=null">
+    <h3>Recenzije korisnika:</h3>
+    <form>
+        <table>
+            <tr>
+                <th>Korisnik:</th>
+                <th>Ocena:</th>
+                <th>Komentar:</th>
+                
+            </tr>
+            <tr *ngFor="let r of recenzije">
+                <!-- <td *ngIf='r.klijent.slika!=null && this.korisnik!=null'>
+                    <img [src]="r.klijent.slika" height="100px" width="100px">
+                </td> -->
+                <td *ngIf='this.korisnik==null'>
+                    <img src="/assets/klijent.png" height="100px" width="100px">
+                </td>
+                <td *ngIf='r.klijent.slika==null && this.korisnik!=null'>{{r.klijent.kor_ime}} <br/>
+                    <img src="/assets/klijent.png" height="100px" width="100px">
+                </td>
+                <td *ngIf=" r.klijent.slika!=null && this.korisnik!=null">{{r.klijent.kor_ime}}
+                    <br/>
+                    <img [src]="r.klijent.slika" height="100px" width="100px">
+                </td>
+                <td>{{r.ocena}}</td>
+                <td>{{r.komentar}}</td>
+                
+            </tr>
+        </table>
+        <div>
+            <button (click)="nazad()">Nazad</button>
+        </div>
+    </form>
+</div>
+
+<!-- <form>
+    <h3>Posalji zahtev za saradnju:</h3>
+    <table>
+        <tr>
+            <td>Objekat:</td>
+            <td>
+                <input type="text" 
+            </td>
+        </tr>
+    </table>
+</form> -->
+
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>

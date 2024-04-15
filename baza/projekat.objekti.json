@@ -1,0 +1,691 @@
+[{
+  "_id": {
+    "$oid": "64909956098a7bc6307c759a"
+  },
+  "tip": "kuca",
+  "adresa": "Jug Bogdana 52",
+  "broj_prostorija": 1,
+  "kvadratura": 35,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 45,
+      "sirina": 87,
+      "id": 1,
+      "zapoceta": true
+    },
+    {
+      "x": 25,
+      "y": 67,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "daca",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64920265a4e6242037004b73"
+  },
+  "tip": "stan",
+  "adresa": "Rahele Ferari 72, Beograd",
+  "broj_prostorija": 1,
+  "kvadratura": 42,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 89,
+      "sirina": 94,
+      "zavrsena": true,
+      "id": 1,
+      "zapoceta": true
+    },
+    {
+      "x": 69,
+      "y": 74,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "maja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64920381a4e6242037004b82"
+  },
+  "tip": "stan",
+  "adresa": "Balkanska 97, Beograd",
+  "broj_prostorija": 1,
+  "kvadratura": 35,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 76,
+      "sirina": 65,
+      "zavrsena": false,
+      "id": 1,
+      "zapoceta": true
+    },
+    {
+      "x": 56,
+      "y": 45,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64920430a4e6242037004b8b"
+  },
+  "tip": "stan",
+  "adresa": "Jug Bogdana 73, Beograd",
+  "broj_prostorija": 1,
+  "kvadratura": 47,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 70,
+      "sirina": 67,
+      "zavrsena": false,
+      "id": 1,
+      "zapoceta": false
+    },
+    {
+      "x": 50,
+      "y": 47,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "nemanja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aad5765610b0b2bcada1ab"
+  },
+  "tip": "kuca",
+  "adresa": "Kapetana Mihajla Alica 8",
+  "broj_prostorija": 3,
+  "kvadratura": 39,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 2
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aae8765610b0b2bcada1b1"
+  },
+  "tip": "kuca",
+  "adresa": "Dobrice Cosica 45, Beograd",
+  "broj_prostorija": 2,
+  "kvadratura": 27,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2,
+      "zapoceta": true
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aae9205610b0b2bcada1c4"
+  },
+  "tip": "stan",
+  "adresa": "Juzni bulevar 46, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2,
+      "zapoceta": true
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "pera",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aae9b45610b0b2bcada1da"
+  },
+  "tip": "kuca",
+  "adresa": "Kapetana Mihajla Alica 8, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": false,
+      "zavrsena": false
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2,
+      "zapoceta": false,
+      "zavrsena": false
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3,
+      "zapoceta": false,
+      "zavrsena": false
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "daca",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaef2e5610b0b2bcada29c"
+  },
+  "tip": "stan",
+  "adresa": "Dobrice Cosica 45, Beograd",
+  "broj_prostorija": 2,
+  "kvadratura": 27,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "daca",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaef665610b0b2bcada29f"
+  },
+  "tip": "stan",
+  "adresa": "Rahele Ferari 72, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "daca",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf3ae5610b0b2bcada2eb"
+  },
+  "tip": "kuca",
+  "adresa": "Juzni bulevar 53, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "maja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf3bd5610b0b2bcada2ee"
+  },
+  "tip": "stan",
+  "adresa": "Jug Bogdana 25, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "maja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf3d15610b0b2bcada2f1"
+  },
+  "tip": "stan",
+  "adresa": "Batutova 43, Beograd",
+  "broj_prostorija": 2,
+  "kvadratura": 27,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2,
+      "zapoceta": true,
+      "zavrsena": true
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "maja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf4355610b0b2bcada318"
+  },
+  "tip": "kuca",
+  "adresa": "Dobrice Cosica 23, Beograd",
+  "broj_prostorija": 3,
+  "kvadratura": 45,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "duzina": 90,
+      "sirina": 80,
+      "id": 3
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "nemanja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf4ae5610b0b2bcada31b"
+  },
+  "tip": "stan",
+  "adresa": "Juzni bulevar 46, Beograd",
+  "broj_prostorija": 2,
+  "kvadratura": 27,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1,
+      "zapoceta": true
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "nemanja",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf4d75610b0b2bcada31e"
+  },
+  "tip": "kuca",
+  "adresa": "Bulevar kralja Aleksandra 46, Beograd",
+  "broj_prostorija": 2,
+  "kvadratura": 27,
+  "skica": [
+    {
+      "x": 0,
+      "y": 0,
+      "duzina": 60,
+      "sirina": 80,
+      "id": 1
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "duzina": 100,
+      "sirina": 60,
+      "id": 2
+    },
+    {
+      "x": 30,
+      "y": 60,
+      "duzina": 10,
+      "sirina": 20
+    },
+    {
+      "x": 60,
+      "y": 120,
+      "duzina": 10,
+      "sirina": 20
+    }
+  ],
+  "klijent": "nemanja",
+  "__v": 0
+}]

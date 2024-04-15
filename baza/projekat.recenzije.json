@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6478da17eb42ded680531492"
+  },
+  "id": 2,
+  "ocena": 4,
+  "komentar": "zadovoljan sam saradnjom",
+  "klijent": "nemanja",
+  "agencija": "kostic"
+},
+{
+  "_id": {
+    "$oid": "6478da44eb42ded680531493"
+  },
+  "id": 3,
+  "ocena": 5,
+  "komentar": "zadovoljna sam saradnjom",
+  "klijent": "daca",
+  "agencija": "redom"
+},
+{
+  "_id": {
+    "$oid": "6491f40da60ef44be9d27336"
+  },
+  "klijent": "pera",
+  "agencija": "stevanovic",
+  "ocena": 3,
+  "komentar": "odlicno uradjeno, ali nisu ispostovali rok",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6491f447a60ef44be9d27337"
+  },
+  "klijent": "maja",
+  "agencija": "totalpro",
+  "ocena": 5,
+  "komentar": "agencija odgovorna, zavrsili pre vremena!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64a292c7495bf998cb961a90"
+  },
+  "klijent": "daca",
+  "agencija": "kostic",
+  "ocena": 5,
+  "komentar": "agencija odgovorna, zavrsili pre vremena!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64aaf5215610b0b2bcada33f"
+  },
+  "klijent": "nemanja",
+  "agencija": "64a0090f8deb584844a55842",
+  "ocena": 5,
+  "komentar": "Jako dobro odradili posao, sve preporuke",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64ab01645610b0b2bcada829"
+  },
+  "klijent": "daca",
+  "agencija": "648add4cb55d1788e0be0242",
+  "ocena": 4,
+  "komentar": "Posao uredno i brzo zavrsen",
+  "__v": 0
+}]

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pocetna stranica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="menu">
+        <a class="menu_item" routerLink="/klijent" *ngIf="this.korisnik!=null">Pocetna</a>
+        <a class="menu_item" routerLink="/" *ngIf="this.korisnik==null">Pocetna</a>
+        <a class="menu_item" routerLink="/registracija" *ngIf="this.korisnik==null">Registracija</a>
+        <a class="menu_item"  routerLink="/prijava" *ngIf="this.korisnik==null">Prijava</a>
+        <a class="menu_item"  routerLink="/lozinka" *ngIf="this.korisnik!=null">Promena lozinke</a>
+        <a class="menu_item"  routerLink="/profil" *ngIf="this.korisnik!=null">Profil</a>
+        <!-- <a class="menu_item"  routerLink="/radnici" *ngIf="agencija">Profil</a> -->
+        <a class="menu_item"  routerLink="/objekti" *ngIf="this.korisnik!=null">Objekti</a>
+        <a class="menu_item"  routerLink="/agencijek" *ngIf="this.korisnik!=null">Agencije</a>
+        <a class="menu_item"  routerLink="/poslovi" *ngIf="this.korisnik!=null">Poslovi</a>
+    <form *ngIf="this.korisnik!=null">
+        <button (click)="odjava()">Odjavi se</button>
+    </form>
+</div>
+<div class="container">
+    <div *ngIf="korisnik.tip=='klijent'">
+    <div *ngIf="recenzija!=null">
+        <form>
+            Vasa recenzija: 
+            <br/>
+         {{recenzija.ocena}} {{recenzija.komentar}}
+
+        
+        <br/>
+        <button (click)="obrisi()">Obrisi recenziju</button>
+<br/>
+<input type="checkbox" name="azuriraj" [(ngModel)]="azuriraj">Azuriraj
+<table *ngIf="azuriraj">
+    <tr>
+        <td>Ocena:</td>
+        <td>
+            <input type="number" name="ocena" [(ngModel)]="ocena">
+        </td>
+    </tr>
+    <tr>
+        <td>Komentar:</td>
+        <td>
+            <input type="text" name="komentar" [(ngModel)]="komentar">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="azurirajRecenziju()">Potvrdi</button>
+        </td>
+    </tr>
+
+</table>
+        
+    </form>
+    </div>
+    <div *ngIf="recenzija==null">
+        <form>
+            <h3>Dodaj recenziju</h3>
+        <table>
+            <tr>
+                <td>Ocena:</td>
+                <td>
+                    <input type="number" name="ocena" [(ngModel)]="ocena">
+                </td>
+            </tr>
+            <tr>
+                <td>Komentar:</td>
+                <td>
+                    <input type="text" name="komentar" [(ngModel)]="komentar">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button (click)="dodajRecenziju()">Dodaj</button>
+                </td>
+            </tr>
+
+        </table>
+        <div>{{poruka}}</div>
+    </form>
+    </div>
+</div>
+<div *ngIf="korisnik.tip == 'admin'">
+    <div *ngIf="recenzija!=null">
+        <br/>
+        Ocena: {{recenzija.ocena}} <br/> Komentar: {{recenzija.komentar}}
+    </div>
+    <div *ngIf="recenzija==null">
+        Klijent nije ostavio recenziju za ovaj posao
+    </div>
+</div>
+
+</div>
+<div class="footer">Projekat</div>
+</body>
+</html>
